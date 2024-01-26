@@ -1,0 +1,33 @@
+<div class="banner-container">
+    <app-header></app-header>
+    <div class="banner">
+        <img class="icon-1" src="../../assets/icons/1.png">
+        <img class="icon-2" src="../../assets/icons/2.png">
+        <img class="icon-3" src="../../assets/icons/3.png">
+        <div class="banner-text">
+            <h1>New Collection</h1>
+            <h3>Flat 20% discount</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex commodi est nesciunt aliquam iste quia quisquam eveniet neque vero. Amet odio ex officia facere fuga esse alias laborum molestiae delectus.</p>
+            <button><i class="fa-solid fa-cart-shopping"></i>Buy Now</button>
+        </div>
+        <div class="banner-img">
+            <div class="image-bg">
+                <img src="../../assets/product1.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="home">
+    <div class="main-container">
+        <div class="product-container" *ngFor="let allProducts of products">
+            <div class="product-category">
+                <span>{{ allProducts.category }}</span>
+                <span><a class="link">Show all</a></span>
+            </div>
+            <div class="products">
+                <app-product *ngFor="let product of allProducts.products" [product]="product"></app-product>
+            </div>
+        </div>
+    </div>
+</div>
