@@ -1,0 +1,14 @@
+<div class="product">
+    <img [src]="product.img">
+
+    <div class="product-details">
+        <p class="name">{{ product.name }}</p>
+        <p class="price">₹ {{ product.price }} </p>
+        <div class="colors">
+            <div class="color black" *ngIf="product.color.includes('Black')"></div>
+            <div class="color white" *ngIf="product.color.includes('White')"></div>
+            <div class="color" style="background-color: #2D314A;" *ngIf="product.color.includes('Teal')"></div>
+            <div class="color" style="background-color: #a82f40;" *ngIf="product.color.includes('Red')"></div>
+        </div>
+    </div>
+</div>
