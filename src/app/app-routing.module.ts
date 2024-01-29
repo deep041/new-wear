@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,6 +12,10 @@ const routes: Routes = [
         path: 'category', 
         loadChildren: () => import('./category/category.module').then(c => c.CategoryModule) 
     },
+    {
+        path: 'cart',
+        component: CartComponent
+    }
 ];
 
 @NgModule({
