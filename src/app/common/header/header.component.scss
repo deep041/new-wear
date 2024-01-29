@@ -11,13 +11,18 @@ header {
 .logo {
     padding: 10px 20px;
     display: inline-block;
-    width: 10%;
+    width: 12%;
     font-weight: 300;
     color: #DE1A1A;
     font-size: 25px;
 }
 
-.logo span {
+.logo span.logo-first {
+    display: inline-block;
+}
+
+.logo span.logo-second {
+    display: inline-block;
     font-weight: bold;
     font-family: "Grape Nuts", cursive;
 }
@@ -30,6 +35,7 @@ header {
 
 .navigation ul {
     list-style: none;
+    margin-bottom: 0px;
 }
 
 .navigation ul li {
