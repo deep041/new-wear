@@ -23,7 +23,7 @@
         <div class="product-container" *ngFor="let allProducts of products">
             <div class="product-category">
                 <span>{{ allProducts.category }}</span>
-                <span><a class="link">Show all</a></span>
+                <span><a class="link" [routerLink]="['../category']">Show all</a></span>
             </div>
             <div class="products">
                 <app-product *ngFor="let product of allProducts.products" [product]="product"></app-product>
@@ -31,3 +31,4 @@
         </div>
     </div>
 </div>
+<app-cart></app-cart>
