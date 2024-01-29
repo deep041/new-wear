@@ -1,0 +1,31 @@
+.login-form {
+    width: 100%;
+    text-align: center;
+}
+
+.login-form .login-form-title {
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    margin-top: 5px;
+}
+
+.modal-content {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.modal-header h5 {
+    width: 90%;
+    display: inline-block;
+}
+
+.modal-header button {
+    width: 10%;
+    display: inline-block;
+}
+
+::ng-deep .login-input {
+    padding: 10px;
+}

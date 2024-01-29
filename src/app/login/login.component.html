@@ -1,0 +1,35 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login / Register</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="login-form">
+                    <div class="login-form-title">{{ page === 1 ? 'Enter your mobile number' : 'Enter OTP' }}</div>
+                    <form [formGroup]="loginForm">
+                        <ngx-intl-tel-input *ngIf="page === 1"
+                            [cssClass]="'login-input'" 
+                            [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
+                            [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+                            [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                            [selectedCountryISO]="CountryISO.UnitedKingdom" 
+                            [phoneValidation]="true" name="phone" formControlName="mobile">
+                        </ngx-intl-tel-input>
+                        <ng-otp-input *ngIf="page === 2" (onInputChange)="onOtpChange($event)" [config]="{length: 4}"></ng-otp-input>
+                    </form>
+                    <p *ngIf="page === 2">Enter OTP for {{ loginForm.value.mobile.number }}</p>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-primary" (click)="login()">{{ page === 1 ? 'Next' : 'Login' }}</button>
+            </div>
+        </div>
+    </div>
+</div>
