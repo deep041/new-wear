@@ -1,1 +1,14 @@
-<p>category works!</p>
+<app-header></app-header>
+
+<div class="home">
+    <div class="main-container">
+        <div class="product-container" *ngFor="let allProducts of products">
+            <div class="product-category">
+                <span>{{ allProducts.category }}</span>
+            </div>
+            <div class="products">
+                <app-product *ngFor="let product of allProducts.products" [product]="product"></app-product>
+            </div>
+        </div>
+    </div>
+</div>

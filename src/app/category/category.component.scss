@@ -1,0 +1,37 @@
+.home {
+    display: flex;
+    justify-content: center;
+}
+
+.home .main-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .main-container .product-container {
+    margin-bottom: 20px;
+}
+
+.home .main-container .product-container .product-category {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .main-container .product-container .product-category span a {
+    color: blue;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.home .main-container .product-container .product-category span a:hover {
+    border-bottom: 1px solid blue;
+}
+
+.home .main-container .product-container .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
